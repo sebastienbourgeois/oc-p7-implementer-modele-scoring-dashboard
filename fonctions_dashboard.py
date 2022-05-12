@@ -149,7 +149,8 @@ def recuperer_donnees_std_client(id_client, df_std_demandes_credit):
 
 def recuperer_prediction_client(donnees_client):
 	headers = {"Content-Type": "application/json"}
-	URI = 'http://127.0.0.1:5000/predictions'
+	#URI = 'http://127.0.0.1:5000/predictions'
+	URI = 'https://oc-api-modele-scoring.herokuapp.com/predictions'
 
 	data_client_json = {'std_donnees_client': donnees_client}
 	response = requests.post(headers=headers, url=URI, json=data_client_json)
