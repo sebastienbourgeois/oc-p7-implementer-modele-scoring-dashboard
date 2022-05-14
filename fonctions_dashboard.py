@@ -126,6 +126,7 @@ def renommer_colonnes(df_demandes_credit, pipeline_pretraitements):
 	        nom_colonnes.append(colonne[11:])
 	return nom_colonnes
 
+@st.cache
 def ajouter_donnees_manquantes(df_std_demandes_credit, df_demandes_credit):
 	df_std_demandes_credit = ajouter_id_client(df_std_demandes_credit, df_demandes_credit)
 	df_std_demandes_credit['NAME_INCOME_TYPE_Maternity leave'] = 0
